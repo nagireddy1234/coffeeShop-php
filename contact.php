@@ -82,23 +82,29 @@
                         <div class="row">
                             <div class="form-group col-lg-4">
                                 <label>First Name</label>
-                                <input type="text" class="form-control">
+                                <input type="text" id="fname" name="fname" maxlength="25" class="form-control" required>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Last Name</label>
-                                <input type="email" class="form-control">
+                                <input type="text" class="form-control" id="lname" name="lname" maxlength="25" required>
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control">
+                                <input type="email" class="form-control" id="email" name="email" maxlength="25" required>
+                            </div> </div>
+                            <!-- <div class="clearfix"></div> -->
+                            <div class="row">
+                            <div class="form-group col-lg-8">
+                                <label>Password</label> 
+                                <input type="password" class="form-control" id="inputPasword" name="inputPasword" maxlength="25" required>
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group col-lg-12">
-                                <label>Password</label>
-                                <input type="password" class="form-control">
+                            <div class="form-group col-lg-4" style="padding:32px; margin-left:-20px">
+                                <input type="checkbox" onclick="passwordfunction()">
+                                <label> Show Password</label>
+                            </div> 
                             </div>
+                            
                             <div class="form-group col-lg-12">
-                                <input type="hidden" name="save" value="contact">
                                 <button type="submit" class="btn btn-default">Submit</button>
                             </div>
                         </div>
@@ -125,6 +131,16 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+function passwordfunction() {
+  var InputPassword = document.getElementById("inputPasword");
+  if (InputPassword.type === "password") {
+    InputPassword.type = "text";
+  } else {
+    InputPassword.type = "password";
+  }
+}
+</script>
 
 </body>
 
