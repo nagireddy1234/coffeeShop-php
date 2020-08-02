@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Contact - Business Casual - Start Bootstrap Theme</title>
+    <title>Contact - Nagi's Coffee Shop</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -45,24 +45,24 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">Contact
-                        <strong>business casual</strong>
+                        <strong>Nagi's Shop</strong>
                     </h2>
                     <hr>
                 </div>
                 <div class="col-md-8">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=nagi's%20coffee%20shop,%20tallinn,%20Estonia+(My%20Business%20Name)&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/map-my-route/">Calculate running distance on map</a></div>
                 </div>
                 <div class="col-md-4">
                     <p>Phone:
-                        <strong>123.456.7890</strong>
+                        <strong>53950665</strong>
                     </p>
                     <p>Email:
-                        <strong><a href="mailto:name@example.com">name@example.com</a></strong>
+                        <strong><a href="mailto:nagireddy.panditi@gmail.com">nagireddy.panditi@gmail.com</a></strong>
                     </p>
-                    <p>Address:
-                        <strong>3481 Melrose Place
-                            <br>Beverly Hills, CA 90210</strong>
+                    <p>Address:Sauna 1-11 | Tallinn- 10140
+                        <strong>
+                            <br>Estonia</strong>
                     </p>
                 </div>
                 <div class="clearfix"></div>
@@ -73,29 +73,29 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Contact
+                    <h2 class="intro-text text-center">Registration
                         <strong>form</strong>
                     </h2>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
+                   
                     <form role="form">
                         <div class="row">
                             <div class="form-group col-lg-4">
-                                <label>Name</label>
+                                <label>First Name</label>
                                 <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Last Name</label>
+                                <input type="email" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
                                 <input type="email" class="form-control">
                             </div>
-                            <div class="form-group col-lg-4">
-                                <label>Phone Number</label>
-                                <input type="tel" class="form-control">
-                            </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" rows="6"></textarea>
+                                <label>Password</label>
+                                <input type="password" class="form-control">
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Nagireddy</p>
                 </div>
             </div>
         </div>
