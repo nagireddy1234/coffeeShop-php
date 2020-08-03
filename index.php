@@ -34,6 +34,21 @@
 
     <div class="brand">The Nagi's Coffee</div>
     <div class="address-bar">Sauna 1-11 | Tallinn- 10140| Estonia</div>
+    <?php
+		
+	if (isset($_GET["logout"])) {
+		
+		if ($_GET["logout"] == "true") { ?>
+			
+			<div class="alert alert-success">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<strong>You have been logged out of the system.</strong>
+			</div>   
+
+	<?php
+		}
+	}
+	?>
 
     <!-- Navigation -->
     <?php require_once 'nav.php';?>

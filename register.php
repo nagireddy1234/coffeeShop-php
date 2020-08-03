@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Contact - Nagi's Coffee Shop</title>
+    <title>The Nagi's Coffee- register</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,63 +27,63 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     <!-- jQuery -->
-     <script src="js/jquery.js"></script>
-    <script type="text/javascript">
+	
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	
+	<!-- Script -->
+	<script type="text/javascript">
         $(document).ready(function () {
 
-            $("#contact").click(function () {
+            $("#register").click(function () {
 
                 fname = $("#fname").val();
+                lname = $("#lname").val();
                 email = $("#email").val();
-                message = $("#message").val();
+                password = $("#password").val();
 
                 $.ajax({
                     type: "POST",
-                    url: "sendmsg.php",
-                    data: "fname=" + fname + "&email=" + email + "&message=" + message,
+                    url: "adduser.php",
+                    data: "fname=" + fname + "&lname=" + lname + "&email=" + email + "&password=" + password,
                     success: function (html) {
                         if (html == 'true') {
 
                             $("#add_err2").html('<div class="alert alert-success"> \
-                                                 <strong>Message Sent!</strong> \ \
+                                                 <strong>Account</strong> processed. \ \
                                                  </div>');
 
-                        } else if (html == 'fname_long') {
+                            window.location.href = "index.php";
+
+                        } else if (html == 'false') {
                             $("#add_err2").html('<div class="alert alert-danger"> \
-                                                 <strong>First Name</strong> must cannot exceed 50 characters. \ \
-                                                 </div>');
-						
-						} else if (html == 'fname_short') {
+                                                 <strong>Email Address</strong> already in system. \ \
+                                                 </div>');                    
+
+                        } else if (html == 'fname') {
                             $("#add_err2").html('<div class="alert alert-danger"> \
-                                                 <strong>First Name</strong> must exceed 2 characters. \ \
-                                                 </div>');
-												 
-						} else if (html == 'email_long') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
-                                                 <strong>Email</strong> must cannot exceed 50 characters. \ \
-                                                 </div>');
-						
-						} else if (html == 'email_short') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
-                                                 <strong>Email</strong> must exceed 2 characters. \ \
+                                                 <strong>First Name</strong> is required. \ \
                                                  </div>');
 												 
-						} else if (html == 'eformat') {
+						} else if (html == 'lname') {
                             $("#add_err2").html('<div class="alert alert-danger"> \
-                                                 <strong>Email</strong> format incorrect. \ \
-                                                 </div>');
-												 
-						} else if (html == 'message_long') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
-                                                 <strong>Message</strong> must cannot exceed 50 characters. \ \
-                                                 </div>');
-						
-						} else if (html == 'message_short') {
-                            $("#add_err2").html('<div class="alert alert-danger"> \
-                                                 <strong>Message</strong> must exceed 2 characters. \ \
+                                                 <strong>Last Name</strong> is required. \ \
                                                  </div>');
 
+                        } else if (html == 'eshort') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Email Address</strong> is required. \ \
+                                                 </div>');
+
+                        } else if (html == 'eformat') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Email Address</strong> format is not valid. \ \
+                                                 </div>');
+												 
+						} else if (html == 'pshort') {
+                            $("#add_err2").html('<div class="alert alert-danger"> \
+                                                 <strong>Password</strong> must be at least 4 characters . \ \
+                                                 </div>');
 
                         } else {
                             $("#add_err2").html('<div class="alert alert-danger"> \
@@ -99,62 +99,36 @@
             });
         });
     </script>
+
 </head>
 
 <body>
 
-<div class="brand">The Nagi's Coffee</div>
-    <div class="address-bar">Sauna 1-11 | Tallinn- 10140| Estonia</div>
+    <div class="brand">The Nagi's Coffee</div>
+    <div class="address-bar">SAUNA 1-11 | TALLINN- 10140| ESTONIA</div>
 
     <!-- Navigation -->
-    <?php require_once 'nav.php';?>
+    <?php require_once 'nav.php'; ?>
 
     <div class="container">
-
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Contact
-                        <strong>Nagi's Shop</strong>
-                    </h2>
-                    <hr>
-                </div>
-                <div class="col-md-8">
-                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=nagi's%20coffee%20shop,%20tallinn,%20Estonia+(My%20Business%20Name)&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/map-my-route/">Calculate running distance on map</a></div>
-                </div>
-                <div class="col-md-4">
-                    <p>Phone:
-                        <strong>53950665</strong>
-                    </p>
-                    <p>Email:
-                        <strong><a href="mailto:nagireddy.panditi@gmail.com">nagireddy.panditi@gmail.com</a></strong>
-                    </p>
-                    <p>Address:Sauna 1-11 | Tallinn- 10140
-                        <strong>
-                            <br>Estonia</strong>
-                    </p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Contact
+                    <h2 class="intro-text text-center">Registration
                         <strong>form</strong>
                     </h2>
-                    <hr>
-                    <div id="add_err2"></div>
-                   
+					<div id="add_err2"></div>
+                    <hr>       
                     <form role="form">
                         <div class="row">
                             <div class="form-group col-lg-4">
-                                <label>Name</label>
+                                <label>First Name</label>
                                 <input type="text" id="fname" name="fname" maxlength="25" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Last Name</label>
+                                <input type="text" id="lname" name="lname" maxlength="25" class="form-control">
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
@@ -162,11 +136,15 @@
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <label>Message</label>
-                                <textarea class="form-control" id="message" name="message" maxlength="100" rows="6"></textarea>
+                                <label>Password</label>
+                                <input type="password" id="password" name="password" maxlength="10" class="form-control">
                             </div>
-                            <div class="form-group col-lg-12">                           
-                                <button type="submit"  id="contact" class="btn btn-default">Submit</button>
+                            <div class="form-group col-lg-4" style="padding:32px; margin-left:-20px">
+                                <input type="checkbox" onclick="passwordfunction()">
+                                <label> Show Password</label>
+                            </div> 
+                            <div class="form-group col-lg-12">
+                                <button type="submit" id="register" class="btn btn-default">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -187,11 +165,18 @@
         </div>
     </footer>
 
-   
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    
+    <script>
+function passwordfunction() {
+  var InputPassword = document.getElementById("password");
+  if (InputPassword.type === "password") {
+    InputPassword.type = "text";
+  } else {
+    InputPassword.type = "password";
+  }
+}
+</script>
 
 </body>
 

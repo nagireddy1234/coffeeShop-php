@@ -1,3 +1,13 @@
+<?php
+//Initialize Session
+session_start();
+
+if (isset($_SESSION['login'])) {
+
+    $fname = $_SESSION['fname'];
+    $lname = $_SESSION['lname'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +19,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog - The Nagi's Coffee</title>
+    <title>The Perfect Cup - Blog</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,12 +28,8 @@
     <link href="css/business-casual.css" rel="stylesheet">
 
     <!-- Fonts -->
-    <link
-        href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-        rel="stylesheet" type="text/css">
-    <link
-        href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
-        rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,62 +43,52 @@
 <body>
 
     <div class="brand">The Nagi's Coffee</div>
-    <div class="address-bar">Sauna 1-11 | Tallinn- 10140| Estonia</div>
+    <div class="address-bar">SAUNA 1-11 | TALLINN- 10140| ESTONIA</div>
 
     <!-- Navigation -->
-    <?php require_once 'nav.php';?>
+    <?php require_once 'nav.php'; ?>
 
     <div class="container">
-
         <div class="row">
             <div class="box">
                 <div class="col-lg-12">
+				
+				<h2 class="text-center">Welcome <?php echo $fname; echo " "; echo $lname; ?> - <a href="logout.php">Logout</a></h2>
+				
                     <hr>
-                    <h2 class="intro-text text-center">Nagi's
+                    <h2 class="intro-text text-center">The Perfect Cup
                         <strong>blog</strong>
                     </h2>
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
                     <img class="img-responsive img-border img-full" src="img/slide-1.jpg" alt="">
-                    <h2>Coconut oil coffee
+                    <h2>COCONUT OIL COFFEE
                         <br>
-                        <small>October 13, 2013</small>
+                        <small>OCTOBER 13, 2016</small>
                     </h2>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
-                        fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                        illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Read
-                        More</button>
+                    <p>Start your morning off with this great recipe for hot coffee with coconut oil and butter.</p>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Read More</button>
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
                     <img class="img-responsive img-border img-full" src="img/slide-2.jpg" alt="">
-                    <h2>Irish coffee
+                    <h2>IRISH COFFEE 
                         <br>
-                        <small>October 13, 2013</small>
+                        <small>SEPTEMBER, 2014</small>
                     </h2>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
-                        fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                        illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Read
-                        More</button>
+                    <p>Take the edge off with a Fresh hot cup of coffee made with Irish whiskey and Irish Cream.</p>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Read More</button>
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
                     <img class="img-responsive img-border img-full" src="img/slide-3.jpg" alt="">
-                    <h2>American Latte
+                    <h2>FROZEN CARAMEL LATTE 
                         <br>
-                        <small>October 13, 2013</small>
+                        <small>JULY 18, 2012</small>
                     </h2>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
-                        fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                        illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Read
-                        More</button>
+                    <p>Sweetened with caramel sauce and topped with whipped cream, this will make you happy any time of day.</p>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">Read More</button>
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
@@ -109,76 +105,74 @@
     </div>
     <!-- /.container -->
 
-    <!--.......Modal.... -->
+	<!-- Modal 1 -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
 
-            <!-- Modal content-->
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Coconut Oil Coffee</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Sample Text.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
 
-            <!-- Model-1 -->
-            <div class="modal fade" id="myModal1" role="dialog">
-                 <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Coconut coffee</h4>
-                        </div>
-                        <div class="modal-body">
-                        <p>Some text in Coconut coffee.</p>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                 </div>
-                </div>
-  
+	  </div>
+	</div>
+	
+	<!-- Modal 2 -->
+	<div id="myModal2" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
 
-    <!-- Model-2 -->
-    <div class="modal fade" id="myModal2" role="dialog">
-                 <div class="modal-dialog">
-    
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Irish coffee</h4>
-                        </div>
-                        <div class="modal-body">
-                        <p>Some text in the Irish coffee.</p>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    
-                 </div>
-                </div>
-    <!-- Model-3 -->
-    <div class="modal fade" id="myModal3" role="dialog">
-                 <div class="modal-dialog">
-    
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">American coffee</h4>
-                        </div>
-                        <div class="modal-body">
-                        <p>Some text in the American coffee.</p>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    
-                 </div>
-                </div>
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Irish Coffee</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Sample Text.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
 
+	  </div>
+	</div>
+	
+	<!-- Modal 3 -->
+	<div id="myModal3" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Frozen Caramel Latte</h4>
+		  </div>
+		  <div class="modal-body">
+			<p>Sample Text.</p>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+
+	  </div>
+	</div>
+	
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Nagireddy</p>
+                    <p>Copyright &copy; The Perfect Cup 2016</p>
                 </div>
             </div>
         </div>
@@ -190,11 +184,13 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script>
-
-
-    </script>
-
 </body>
 
 </html>
+
+<?php
+
+} else {
+    header("location:login.php ");
+}
+?>
