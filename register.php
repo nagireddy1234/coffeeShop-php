@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>The Nagi's Coffee- register</title>
+    <title>Nagi's coffee shop - Contact</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,7 @@
                 lname = $("#lname").val();
                 email = $("#email").val();
                 password = $("#password").val();
+
 
                 $.ajax({
                     type: "POST",
@@ -104,7 +105,7 @@
 
 <body>
 
-    <div class="brand">The Nagi's Coffee</div>
+    <div class="brand">Nagi's coffee shop</div>
     <div class="address-bar">SAUNA 1-11 | TALLINN- 10140| ESTONIA</div>
 
     <!-- Navigation -->
@@ -139,10 +140,6 @@
                                 <label>Password</label>
                                 <input type="password" id="password" name="password" maxlength="10" class="form-control">
                             </div>
-                            <div class="form-group col-lg-4" style="padding:32px; margin-left:-20px">
-                                <input type="checkbox" onclick="passwordfunction()">
-                                <label> Show Password</label>
-                            </div> 
                             <div class="form-group col-lg-12">
                                 <button type="submit" id="register" class="btn btn-default">Submit</button>
                             </div>
@@ -159,7 +156,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Nagireddy</p>
+                    <p>Copyright &copy; Nagireddy </p>
                 </div>
             </div>
         </div>
@@ -167,16 +164,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-function passwordfunction() {
-  var InputPassword = document.getElementById("password");
-  if (InputPassword.type === "password") {
-    InputPassword.type = "text";
-  } else {
-    InputPassword.type = "password";
-  }
-}
-</script>
 
 </body>
 

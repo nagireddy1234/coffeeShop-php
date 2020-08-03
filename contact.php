@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Contact - Nagi's Coffee Shop</title>
+    <title>Nagi's coffee shop - Contact</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,9 +27,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     <!-- jQuery -->
-     <script src="js/jquery.js"></script>
-    <script type="text/javascript">
+	
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	
+		<script type="text/javascript">
         $(document).ready(function () {
 
             $("#contact").click(function () {
@@ -99,15 +101,16 @@
             });
         });
     </script>
+
 </head>
 
 <body>
 
-<div class="brand">The Nagi's Coffee</div>
-    <div class="address-bar">Sauna 1-11 | Tallinn- 10140| Estonia</div>
+    <div class="brand">Nagi's coffee shop</div>
+    <div class="address-bar">SAUNA 1-11 | TALLINN- 10140| ESTONIA</div>
 
     <!-- Navigation -->
-    <?php require_once 'nav.php';?>
+    <?php require_once 'nav.php'; ?>
 
     <div class="container">
 
@@ -116,13 +119,12 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">Contact
-                        <strong>Nagi's Shop</strong>
+                        <strong>Nagi's coffee shop</strong>
                     </h2>
                     <hr>
                 </div>
                 <div class="col-md-8">
-                    <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=nagi's%20coffee%20shop,%20tallinn,%20Estonia+(My%20Business%20Name)&amp;t=k&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/map-my-route/">Calculate running distance on map</a></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.4557903780455!2d-118.33880764857918!3d34.08346238050228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b8d3b1e0287d%3A0x9cc32be17df028b8!2sMelrose+Ave%2C+Beverly+Hills%2C+CA+90210%2C+USA!5e0!3m2!1sen!2sca!4v1458950947899" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
                 <div class="col-md-4">
                     <p>Phone:
@@ -131,7 +133,7 @@
                     <p>Email:
                         <strong><a href="mailto:nagireddy.panditi@gmail.com">nagireddy.panditi@gmail.com</a></strong>
                     </p>
-                    <p>Address:Sauna 1-11 | Tallinn- 10140
+                    <p>Address:SAUNA 1-11 | TALLINN- 10140
                         <strong>
                             <br>Estonia</strong>
                     </p>
@@ -149,7 +151,6 @@
                     </h2>
                     <hr>
                     <div id="add_err2"></div>
-                   
                     <form role="form">
                         <div class="row">
                             <div class="form-group col-lg-4">
@@ -187,11 +188,8 @@
         </div>
     </footer>
 
-   
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    
 
 </body>
 

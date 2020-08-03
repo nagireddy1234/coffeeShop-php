@@ -1,13 +1,7 @@
-<?php 
-
+<?php
 session_start();
+
 //Open a new connection to the MySQL server
-
-// $servername ="localhost";
-// $username = "root";
-// $password = "";
-
-
 $mysqli = new mysqli('localhost', 'root', '', 'nagi_coffee_shop');
 
 //Output any connection error
@@ -66,6 +60,5 @@ if (strlen($fname) < 2) {
 		}
 		
 }
-
 
 ?>

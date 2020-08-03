@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Contact - Nagi's Coffee Shop</title>
+    <title>Nagi's coffee shop - Register</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,10 +27,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     <!-- jQuery -->
-     <script src="js/jquery.js"></script>
-
-     <script type="text/javascript">
+	
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+	
+	<!-- Script -->
+	<script type="text/javascript">
         		$(document).ready(function(){
 			
 			   $("#login").click(function(){
@@ -77,53 +79,51 @@
 
 <body>
 
-<div class="brand">The Nagi's Coffee</div>
+
+    <div class="brand">The Nagi's Coffee</div>
     <div class="address-bar">Sauna 1-11 | Tallinn- 10140| Estonia</div>
 
     <!-- Navigation -->
-    <?php require_once 'nav.php';?>
+    <?php require_once 'nav.php'; ?>
 
     <div class="container">
         <div class="row">
             <div class="box">
-                    <hr>
-                    <h2 class="intro-text text-center">Login
-                        <strong>form</strong>
+                <div class="col-lg-12">
+                    
+					<div class="alert alert-danger">
+					<strong>You must be logged in to view the blog.</strong>
+					</div>
+
+					
+					<hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Login</strong>
                     </h2>
-                    <hr>
-                    <div class="col-lg-12">
-                <div class="alert alert-danger">
-                <strong>you must be loggedin to view the blog</strong>
-                </div>
-                    <div id="add_err2"></div>
-                   
-                    <form role="form" >
+					<div id="add_err2"></div>
+                    <hr>       
+                    <form role="form">
                         <div class="row">
-                            
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control" id="email" name="email" maxlength="25" >
-                            </div> </div>
-                            <!-- <div class="clearfix"></div> -->
-                            <div class="row">
-                            <div class="form-group col-lg-8">
-                                <label>Password</label> 
-                                <input type="password" class="form-control" id="inputPasword" name="inputPasword" maxlength="25" >
+                                <input type="email" id="email" name="email" maxlength="25" class="form-control">
                             </div>
-                            <div class="form-group col-lg-4" style="padding:32px; margin-left:-20px">
-                                <input type="checkbox" onclick="passwordfunction()">
-                                <label> Show Password</label>
-                            </div> 
-                            </div>
-                            
+                            <div class="clearfix"></div>
                             <div class="form-group col-lg-12">
-                                <button type="submit" class="btn btn-default" id="login">Login</button>
+                                <label>Password</label>
+                                <input type="password" id="password" name="password" maxlength="10" class="form-control">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <button type="submit" id="login" class="btn btn-default">Login</button>
                             </div>
                         </div>
                     </form>
-                            <div class="form-group col-lg-12">
-                                <a href="register.php"> <button type="submit" class="btn btn-default"> Not a member? Register here</button></a>
-                            </div>
+					
+					<div class="form-group col-lg-12">
+						<a href="register.php"><button type="submit" class="btn btn-default">Not a Member? Register here</button></a>
+					</div>
+
+					
                 </div>
             </div>
         </div>
@@ -135,26 +135,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Nagireddy</p>
+                    <p>Copyright &copy; The Perfect Cup 2016</p>
                 </div>
             </div>
         </div>
     </footer>
 
-   
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script>
-function passwordfunction() {
-  var InputPassword = document.getElementById("inputPasword");
-  if (InputPassword.type === "password") {
-    InputPassword.type = "text";
-  } else {
-    InputPassword.type = "password";
-  }
-}
-</script>
 
 </body>
 
