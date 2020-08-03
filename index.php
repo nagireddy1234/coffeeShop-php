@@ -91,7 +91,7 @@
                 <div class="col-lg-12">
                     <hr>
                     <h2 class="intro-text text-center">How to make a 
-                        <strong>Coffee shop Website</strong>
+                        <strong>Coffee</strong>
                     </h2>
                     <hr>
                     <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
